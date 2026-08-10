@@ -171,10 +171,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="sft-brand">
             <Link to="/" className="sft-logo">
-              <span className="sft-logo-icon">S</span>
-              <span className="sft-logo-text">StellarAid</span>
+              <span className="sft-logo-icon">P</span>
+              <span className="sft-logo-text">PawnLoan</span>
             </Link>
-            <p className="sft-tagline">Transparent charitable giving on blockchain</p>
+            <p className="sft-tagline">Trustless collateralized lending on Stellar</p>
           </div>
 
           {/* Platform */}
@@ -218,7 +218,7 @@ export default function Footer() {
         </div>
 
         <div className="sft-bottom">
-          © {new Date().getFullYear()} StellarAid. All rights reserved.
+          © {new Date().getFullYear()} PawnLoan. All rights reserved.
         </div>
       </footer>
     </>
