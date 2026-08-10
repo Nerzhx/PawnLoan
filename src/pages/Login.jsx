@@ -101,7 +101,7 @@ const Login = () => {
               letterSpacing: "-0.01em",
             }}
           >
-            StellarAid
+            PawnLoan
           </span>
         </div>
 
