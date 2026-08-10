@@ -5,7 +5,7 @@ import WhyChooseUs from './WhyChooseUs';
 describe('WhyChooseUs Component', () => {
   it('renders the main heading', () => {
     render(<WhyChooseUs />);
-    expect(screen.getByText(/Why choose StellarAid\?/i)).toBeInTheDocument();
+    expect(screen.getByText(/Why choose PawnLoan\?/i)).toBeInTheDocument();
   });
 
   it('renders the correct number of feature cards', () => {
