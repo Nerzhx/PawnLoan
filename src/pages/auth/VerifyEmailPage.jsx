@@ -73,7 +73,7 @@ const VerifyEmailPage = () => {
             <span style={{ color: "#fff", fontWeight: "700", fontSize: "20px" }}>S</span>
           </div>
           <span style={{ fontSize: "18px", fontWeight: "700", color: "#1e293b", letterSpacing: "-0.02em" }}>
-            StellarAid
+            PawnLoan
           </span>
         </div>
 

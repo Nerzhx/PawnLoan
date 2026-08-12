@@ -333,8 +333,8 @@ export default function Navbar() {
         <div className="sna-inner">
           {/* Logo */}
           <Link to="/" className="sna-logo" onClick={handleNavClick}>
-            <span className="sna-logo-icon">S</span>
-            <span className="sna-logo-text">StellarAid</span>
+            <span className="sna-logo-icon">P</span>
+            <span className="sna-logo-text">PawnLoan</span>
           </Link>
 
           {/* Desktop nav */}

@@ -100,7 +100,7 @@ const Register = () => {
             <span style={{ fontSize: "16px", fontWeight: "600", color: "#1e293b", 
               // fontFamily: "'Outfit', sans-serif", 
               letterSpacing: "-0.01em" }}>
-              StellarAid
+              PawnLoan
             </span>
           </div>
 

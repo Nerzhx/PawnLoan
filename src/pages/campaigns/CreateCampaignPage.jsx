@@ -70,7 +70,6 @@ const CreateCampaignPage = () => {
   const handleSubmit = () => {
     // Placeholder submit; integrates with campaign service in a later issue.
     console.log("Submitting campaign draft:", draft);
-    dispatch(resetCampaignForm());
     // A new campaign appears on the dashboard's "Recent Campaigns" list and
     // is reflected in summary stats, so invalidate those caches so the next
     // dashboard load fetches fresh data.

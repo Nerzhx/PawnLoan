@@ -42,7 +42,7 @@ export default function DashboardLayout() {
       >
         {/* Logo / close row */}
         <div className="flex items-center justify-between px-5 h-16 border-b border-slate-200">
-          <span className="text-lg font-bold text-slate-900">StellarAid</span>
+          <span className="text-lg font-bold text-slate-900">PawnLoan</span>
           <button
             className="lg:hidden text-slate-500 hover:text-slate-700"
             onClick={() => setOpen(false)}
@@ -88,7 +88,7 @@ export default function DashboardLayout() {
           >
             <Menu className="w-5 h-5" />
           </button>
-          <span className="ml-3 font-semibold text-slate-800">StellarAid</span>
+          <span className="ml-3 font-semibold text-slate-800">PawnLoan</span>
         </header>
 
         <main className="flex-1 p-6">

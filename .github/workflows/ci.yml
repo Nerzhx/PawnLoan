@@ -7,8 +7,8 @@ on:
     branches: [main, master]
 
 jobs:
-  dependencies:
-    name: Install dependencies
+  frontend:
+    name: Frontend (lint, test, build)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -23,22 +23,49 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-  build:
-    name: Build
-    needs: dependencies
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Lint
+        run: npm run lint
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
+      - name: Test
+        run: npm run test
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
+      - name: Build
         run: npm run build
+
+  contracts:
+    name: Soroban contract (fmt, clippy, test)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: contracts
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+          targets: wasm32-unknown-unknown
+
+      - name: Cache cargo registry & target
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            contracts/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('contracts/Cargo.lock') }}
+          restore-keys: ${{ runner.os }}-cargo-
+
+      - name: Format check
+        run: cargo fmt --all -- --check
+
+      - name: Clippy
+        run: cargo clippy --all-targets -- -D warnings
+
+      - name: Test
+        run: cargo test
+
+      - name: Build Wasm
+        run: cargo build --target wasm32-unknown-unknown --release

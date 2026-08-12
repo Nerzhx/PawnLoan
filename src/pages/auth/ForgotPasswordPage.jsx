@@ -86,7 +86,7 @@ const ForgotPasswordPage = () => {
               letterSpacing: "-0.02em",
             }}
           >
-            StellarAid
+            PawnLoan
           </span>
         </div>
 

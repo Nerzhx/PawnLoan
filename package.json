@@ -1,5 +1,5 @@
 {
-  "name": "stellaraid-frontend",
+  "name": "pawnloan-frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,8 +12,10 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "@creit.tech/stellar-wallets-kit": "^1.9.5",
     "@hookform/resolvers": "^5.2.2",
     "@reduxjs/toolkit": "^2.11.2",
+    "@stellar/stellar-sdk": "^13.3.0",
     "axios": "^1.13.6",
     "lucide-react": "^0.577.0",
     "prop-types": "^15.8.1",
